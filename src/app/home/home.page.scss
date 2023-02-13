@@ -1,0 +1,22 @@
+ion-content {
+  --background: #ff8567 url('../../assets/slider.jpg') no-repeat cover fixed center;
+    background: url('../../assets/slider.jpg') no-repeat fixed center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+}
+
+h3 {
+  text-align: center;
+  color: #fff !important;
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 110%;
+}
+
+.button {
+  margin: 20px;
+  letter-spacing: inherit;
+  font-size: 18px;
+  font-weight: 600;
+}
