@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-
+import { WebView } from '@ionic-native/ionic-webview/ngx';
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
@@ -15,6 +15,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   bootstrap: [AppComponent],
   providers: [
     InAppBrowser,
+    WebView,
     SplashScreen,
     StatusBar,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
