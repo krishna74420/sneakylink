@@ -28,11 +28,14 @@
     <preference name="KeyboardAppearanceDark" value="TRUE" />
     <preference name="AllowLinkPreview" value="TRUE" />
     <preference name="HideKeyboardFormAccessoryBar" value="TRUE" />
-    <allow-navigation href="https://mobile.sneakylink.net//*" />
+    <allow-navigation href="https://mobile.sneakylink.net/*" />
     <preference name="CordovaWebViewEngine" value="CDVUIWebViewEngine" />
     <preference name="CacheMode" value="localCache" />
     <preference name="CachingEnabled" value="true" />
-    <preference name="WKWebViewOnly" value="false" />
+    <feature name="CDVWKWebViewEngine">
+    <param name="ios-package" value="CDVWKWebViewEngine" />
+    </feature>
+    <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
     <preference name="AllowBackForwardNavigationGestures" value="false" />
     <platform name="android">
         <preference name="Scheme" value="http" />
