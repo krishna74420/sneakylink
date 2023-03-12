@@ -5,6 +5,7 @@
     <author email="info@sneakylink.com" href="http://sneakylink.com/">sneakylink Team</author>
     <content src="index.html" />
     <access origin="*" />
+    <allow-navigation href="https://mobile.sneakylink.net/*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
@@ -13,12 +14,6 @@
     <allow-intent href="geo:*" />
     <preference name="ScrollEnabled" value="true" />
     <preference name="BackupWebStorage" value="true" />
-    <preference name="SplashMaintainAspectRatio" value="true" />
-    <preference name="FadeSplashScreenDuration" value="300" />
-    <preference name="SplashShowOnlyFirstTime" value="false" />
-    <preference name="SplashScreen" value="screen" />
-    <preference name="SplashScreenDelay" value="3000" />
-    <preference name="AutoHideSplashScreen" value="true" />
     <preference name="target-device" value="universal" />
     <preference name="KeyboardResize" value="false" />
     <preference name="AutoInjectCordova" value="TRUE" />
@@ -28,12 +23,11 @@
     <preference name="KeyboardAppearanceDark" value="TRUE" />
     <preference name="AllowLinkPreview" value="TRUE" />
     <preference name="HideKeyboardFormAccessoryBar" value="TRUE" />
-    <allow-navigation href="https://mobile.sneakylink.net/*" />
     <preference name="CordovaWebViewEngine" value="CDVUIWebViewEngine" />
     <preference name="CacheMode" value="localCache" />
     <preference name="CachingEnabled" value="true" />
     <feature name="CDVWKWebViewEngine">
-    <param name="ios-package" value="CDVWKWebViewEngine" />
+        <param name="ios-package" value="CDVWKWebViewEngine" />
     </feature>
     <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
     <preference name="AllowBackForwardNavigationGestures" value="false" />
@@ -162,6 +156,6 @@
     <plugin name="cordova-plugin-statusbar" spec="2.4.2" />
     <plugin name="cordova-plugin-device" spec="2.0.2" />
     <plugin name="cordova-plugin-splashscreen" spec="^6.0.2" />
-    <plugin name="cordova-plugin-ionic-webview" spec="^5.0.0" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
+    <plugin name="cordova-plugin-inappbrowser" spec="^5.0.0" />
 </widget>
