@@ -4,14 +4,9 @@
     <description>sneakylink</description>
     <author email="info@sneakylink.com" href="http://sneakylink.com/">sneakylink Team</author>
     <content src="index.html" />
-    <access origin="*" />
-    <allow-navigation href="https://mobile.sneakylink.net/*" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
-    <allow-intent href="tel:*" />
-    <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" />
-    <allow-intent href="geo:*" />
+    <access origin="*" subdomains="true"/>
+    <allow-navigation href="*" />
+    <allow-intent href="*" />
     <preference name="ScrollEnabled" value="true" />
     <preference name="BackupWebStorage" value="true" />
     <preference name="target-device" value="universal" />
@@ -31,6 +26,14 @@
     </feature>
     <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
     <preference name="AllowBackForwardNavigationGestures" value="false" />
+    <preference name="AllowInlineMediaPlayback" value="true" />
+    <preference name="MediaPlaybackRequiresUserAction" value="false" />
+    <preference name="prerendered-icon" value="true" />
+    <preference name="ios-keep-alive-workaround" value="true" />
+    <preference name="BackupWebStorage" value="local" />
+    <preference name="WebViewCacheSize" value="100000" />
+    <preference name="iosPersistentFileLocation" value="Compatibility" />
+    <preference name="iosPersistentFileBackup" value="none" />
     <platform name="android">
         <preference name="Scheme" value="http" />
         <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application" xmlns:android="http://schemas.android.com/apk/res/android">
@@ -153,9 +156,24 @@
         <splash height="480" src="resources/ios/splash/Default~iphone.png" width="320" />
         <splash height="2732" src="resources/ios/splash/Default@2x~universal~anyany.png" width="2732" />
     </platform>
+    <platform name="ios">
+        <config-file parent="NSCameraUsageDescription" platform="ios" target="*-Info.plist">
+            <string>Need camera access for take photo and scan document</string>
+        </config-file>
+        <edit-config file="*-Info.plist" mode="merge" target="NSCameraUsageDescription">
+            <string>Need camera access for take photo and scan document</string>
+        </edit-config>
+        <edit-config file="*-Info.plist" mode="merge" target="NSPhotoLibraryAddUsageDescription">
+            <string>Need photo library access to save documents there</string>
+        </edit-config>
+        <edit-config file="*-Info.plist" mode="merge" target="NSLocationWhenInUseUsageDescription">
+            <string>Need location access to find things nearby</string>
+        </edit-config>
+    </platform>
     <plugin name="cordova-plugin-statusbar" spec="2.4.2" />
     <plugin name="cordova-plugin-device" spec="2.0.2" />
     <plugin name="cordova-plugin-splashscreen" spec="^6.0.2" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
     <plugin name="cordova-plugin-inappbrowser" spec="^5.0.0" />
+    <plugin name="cordova-plugin-camera" spec="^6.0.0" />
 </widget>
