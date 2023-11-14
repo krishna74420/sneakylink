@@ -4,7 +4,7 @@
     <description>sneakylink</description>
     <author email="info@sneakylink.com" href="http://sneakylink.com/">sneakylink Team</author>
     <content src="index.html" />
-    <access origin="*" subdomains="true"/>
+    <access origin="*" subdomains="true" />
     <allow-navigation href="*" />
     <allow-intent href="*" />
     <preference name="ScrollEnabled" value="true" />
@@ -20,6 +20,7 @@
     <preference name="HideKeyboardFormAccessoryBar" value="TRUE" />
     <preference name="CordovaWebViewEngine" value="CDVUIWebViewEngine" />
     <preference name="CacheMode" value="localCache" />
+    <preference name="android-targetSdkVersion" value="31" />
     <preference name="CachingEnabled" value="true" />
     <feature name="CDVWKWebViewEngine">
         <param name="ios-package" value="CDVWKWebViewEngine" />
