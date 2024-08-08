@@ -1,38 +1,35 @@
 import { Component } from '@angular/core';
-// import { SplashScreen } from '@ionic-native/splash-screen/ngx';
-// import { StatusBar } from '@ionic-native/status-bar/ngx';
-// import { Platform } from '@ionic/angular';
-// import { WebView } from '@ionic-native/ionic-webview/ngx';
-// import {Platform} from '@ionic/angular';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { WebView } from '@ionic-native/ionic-webview/ngx';
 import { InAppBrowser, InAppBrowserOptions } from '@ionic-native/in-app-browser/ngx';
-import { LoadingController } from '@ionic/angular';
+import { LoadingController, Platform } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  styleUrls: ['app.component.scss'],
+  styleUrls: ['app.component.scss']
+
 })
 export class AppComponent {
-  // constructor(private platform: Platform,
-  //   private splashScreen: SplashScreen,
-  //   private statusBar: StatusBar) {
-  //   this.initializeApp();
-  // }
-
-  // initializeApp() {
-  //   this.platform.ready().then(() => {
-  //     this.statusBar.backgroundColorByHexString("#ff8567");
-  //     this.splashScreen.hide();
-  //   });
-  // }
-  // private win: any = window;
-
-  constructor(
+  
+  constructor(private platform: Platform,
+    private splashScreen: SplashScreen,
     private iab: InAppBrowser,
-    private loadingController: LoadingController
-  ) {
-    this.loadUrl('https://mobile.sneakylink.net/mobile/');
+    private loadingController: LoadingController,
+    private statusBar: StatusBar) {
+    this.initializeApp();
   }
+
+  
+  initializeApp() {
+    this.platform.ready().then(() => {
+      this.statusBar.backgroundColorByHexString("#ff8567");
+      this.splashScreen.hide();
+    });
+  }
+  // private win: any = window;
 
   loadUrl(url: string) {
     // let urlWithCache = url;

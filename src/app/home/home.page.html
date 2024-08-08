@@ -1,4 +1,47 @@
-<ion-content>
-  <h3>NEARBY SINGLES</h3>
-  <ion-button mode="ios" color="light" expand="full" shape="round" fill="outline" (click)="openWebpage()" class="button">Continue</ion-button>
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-title>Sneakylink</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <br>
+  <p style="text-align: center;
+  font-weight: 600;
+  font-size: 22px;
+  margin: 0px;
+  color: #155dbf;">Enquiry</p>
+  <p style="text-align: center; color: var(--ion-color-medium-tint);
+  margin: 5px;
+  font-size: small;">sneakylink</p>
+
+  <form [formGroup]="loginForm" (ngSubmit)="submitForm()">
+
+    <ion-label color="medium" class="label">
+      Name</ion-label>
+    <ion-item lines="none">
+      <ion-input formControlName="user_name">
+      </ion-input>
+    </ion-item>
+
+    <ion-label color="medium" class="label">
+      Email</ion-label>
+    <ion-item lines="none">
+      <ion-input formControlName="user_email">
+      </ion-input>
+    </ion-item>
+
+    <ion-label color="medium" class="label">
+      Description</ion-label>
+    <ion-item lines="none">
+      <ion-input row="6" formControlName="user_description">
+      </ion-input>
+    </ion-item>
+
+    <br>
+    <ion-button mode="ios" color="success" expand="block" type="submit"
+      style="margin: 20px auto 5px; letter-spacing: inherit;">
+      Submit &nbsp;<ion-icon name="log-in-outline"></ion-icon>
+    </ion-button>
+  </form>
 </ion-content>

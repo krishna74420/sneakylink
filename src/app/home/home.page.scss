@@ -1,10 +1,10 @@
-ion-content {
-  --background: #ff8567 url('../../assets/slider.jpg') no-repeat cover fixed center;
-    background: url('../../assets/slider.jpg') no-repeat fixed center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-}
+// ion-content {
+//   --background: #ff8567 url('../../assets/slider.jpg') no-repeat cover fixed center;
+//     background: url('../../assets/slider.jpg') no-repeat fixed center;
+//     -webkit-background-size: cover;
+//     -moz-background-size: cover;
+//     background-size: cover;
+// }
 
 h3 {
   text-align: center;
@@ -19,4 +19,21 @@ h3 {
   letter-spacing: inherit;
   font-size: 18px;
   font-weight: 600;
+}
+
+.item {
+  border: 1px solid var(--ion-color-light-shade);
+  border-radius: 5px;
+  --padding-start: 10px;
+  color: var(--ion-color-medium-shade);
+}
+
+.label {
+  position: relative;
+  left: 10px;
+  top: 7px;
+  background: #ffffff;
+  padding: 0px 10px;
+  z-index: 100;
+  font-size: 14px;
 }
