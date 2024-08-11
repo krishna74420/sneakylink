@@ -7,6 +7,9 @@
     <access origin="*" subdomains="true" />
     <allow-navigation href="*" />
     <allow-intent href="*" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
     <preference name="ScrollEnabled" value="true" />
     <preference name="BackupWebStorage" value="true" />
     <preference name="target-device" value="universal" />
@@ -65,6 +68,7 @@
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
+        <preference name="scheme" value="app" />
         <icon height="57" src="resources/ios/icon/icon.png" width="57" />
         <icon height="114" src="resources/ios/icon/icon@2x.png" width="114" />
         <icon height="29" src="resources/ios/icon/icon-small.png" width="29" />
