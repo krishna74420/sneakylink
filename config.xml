@@ -35,6 +35,7 @@
     <preference name="WebViewCacheSize" value="100000" />
     <preference name="iosPersistentFileLocation" value="Compatibility" />
     <preference name="iosPersistentFileBackup" value="none" />
+    <preference name="AutoHideSplashScreen" value="true" />
     <platform name="android">
         <preference name="Scheme" value="http" />
         <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application" xmlns:android="http://schemas.android.com/apk/res/android">
