@@ -46,7 +46,12 @@ export class HomePage {
       this.showToast('Please enter description!');
       return;
     }
-    this.presentAlert();
+    this.present();
+    
+    setTimeout(() => {
+      this.presentAlert();
+      this.loginForm.reset();
+      },2000);
   }
 
   openWebpage() {
@@ -65,7 +70,7 @@ export class HomePage {
     this.loader = await this.loadingController.create({
       cssClass: 'my-custom-class',
       message: 'Please wait...',
-      duration: 2000
+      duration: 1500
     });
     await this.loader.present();
   }
