@@ -5,6 +5,18 @@
 //     -moz-background-size: cover;
 //     background-size: cover;
 // }
+.enquirylist {
+  border: solid 1px gainsboro;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.account_icons {
+  font-size: 35px;
+  margin-right: 5px;
+  color: white;
+}
 
 h3 {
   text-align: center;
@@ -36,4 +48,10 @@ h3 {
   padding: 0px 10px;
   z-index: 100;
   font-size: 14px;
+}
+
+h5 {
+  text-align: center;
+  color: red;
+  font-weight: 600;
 }

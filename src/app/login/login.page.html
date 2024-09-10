@@ -1,0 +1,50 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="ion-text-center">
+    <img src="assets/logo.png" style="width: 60%;">
+  </div>
+
+  <br>
+  <p style="text-align: center;
+    font-weight: 600;
+    font-size: 22px;
+    margin: 0px;
+    color: #155dbf;">Welcome</p>
+  <p style="text-align: center; color: var(--ion-color-medium-tint);
+    margin: 5px;
+    font-size: small;">Sign in to continue</p>
+
+  <form [formGroup]="loginForm" (ngSubmit)="submitForm()">
+
+    <ion-label color="medium" class="label">
+      Email</ion-label>
+    <ion-item lines="none">
+      <ion-input formControlName="user_email">
+      </ion-input>
+    </ion-item>
+
+    <ion-label color="medium" class="label">
+      Password</ion-label>
+    <ion-item lines="none">
+      <ion-input formControlName="user_password">
+      </ion-input>
+    </ion-item>
+
+    <br>
+    <ion-button mode="ios" color="success" expand="block" type="submit"
+      style="margin: 20px auto 5px; letter-spacing: inherit;">
+      Login &nbsp;<ion-icon name="log-in-outline"></ion-icon>
+    </ion-button>
+  </form>
+  <br><br>
+  <div class="ion-text-center">
+    <ion-label color="dark">Does not have account?
+      <strong style="color: #2684ff" routerLink="/signup" routerDirection="forward">Sign Up</strong>
+    </ion-label>
+  </div>
+</ion-content>
