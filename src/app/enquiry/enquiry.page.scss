@@ -1,0 +1,51 @@
+// ion-content {
+//   --background: #ff8567 url('../../assets/slider.jpg') no-repeat cover fixed center;
+//     background: url('../../assets/slider.jpg') no-repeat fixed center;
+//     -webkit-background-size: cover;
+//     -moz-background-size: cover;
+//     background-size: cover;
+// }
+
+.enquirylist {
+    border: solid 1px gainsboro;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.account_icons {
+    font-size: 35px;
+    margin-right: 5px;
+    color: white;
+}
+
+h3 {
+    text-align: center;
+    color: #fff !important;
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 110%;
+}
+
+.item {
+    border: 1px solid var(--ion-color-light-shade);
+    border-radius: 5px;
+    --padding-start: 10px;
+    color: var(--ion-color-medium-shade);
+}
+
+.label {
+    position: relative;
+    left: 10px;
+    top: 7px;
+    background: #ffffff;
+    padding: 0px 10px;
+    z-index: 100;
+    font-size: 14px;
+}
+
+h5 {
+    text-align: center;
+    color: red;
+    font-weight: 600;
+}
