@@ -1,7 +1,7 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button mode="md" defaultHref="/"></ion-back-button>
+      <ion-back-button mode="md" defaultHref="/login"></ion-back-button>
     </ion-buttons>
     <ion-title></ion-title>
   </ion-toolbar>
@@ -24,23 +24,21 @@
 
   <form [formGroup]="signupForm" (ngSubmit)="submitForm()">
 
-    <ion-label color="medium" class="label">
-      Name</ion-label>
-    <ion-item lines="none">
+    <ion-item>
+      <ion-label position="floating">Name</ion-label>
       <ion-input formControlName="user_name">
       </ion-input>
     </ion-item>
 
-    <ion-label color="medium" class="label">
-      Email</ion-label>
-    <ion-item lines="none">
+    <ion-item style="margin-top: 10px;">
+      <ion-label position="floating">Email</ion-label>
       <ion-input formControlName="user_email">
       </ion-input>
     </ion-item>
 
-    <ion-label color="medium" class="label">
-      Password</ion-label>
-    <ion-item lines="none">
+
+    <ion-item style="margin-top: 10px;">
+      <ion-label position="floating">Password</ion-label>
       <ion-input type="password" formControlName="user_password">
       </ion-input>
     </ion-item>

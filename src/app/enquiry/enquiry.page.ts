@@ -11,7 +11,7 @@ import { BehaviorSubject } from 'rxjs';
   templateUrl: './enquiry.page.html',
   styleUrls: ['./enquiry.page.scss'],
 })
-export class EnquiryPage{
+export class EnquiryPage {
   enquiryForm: FormGroup;
   isSubmitted = false;
   selectSegments: any = '1';
@@ -35,7 +35,11 @@ export class EnquiryPage{
   ngOnInit() {
     const userId = new BehaviorSubject(JSON.parse(localStorage.getItem('user_id')!));
     this.users = userId.value
-    this.user_id = this.users['result']['user_id'];
+    if (this.users != null) {
+      this.user_id = this.users['result']['user_id'];
+    } else {
+      this.user_id = 1;
+    }
     this.getEnquiryLists();
   }
 

@@ -23,16 +23,24 @@ export class HomePage {
   ngOnInit() {
     const userId = new BehaviorSubject(JSON.parse(localStorage.getItem('user_id')!));
     this.users = userId.value
-    this.user_id = this.users['result']['user_id'];
-    this.getUserLists();
+    if (this.users != null) {
+      this.user_id = this.users['result']['user_id'];
+    }
   }
 
   ionViewWillEnter() {
-
+    this.getUserLists();
   }
 
   gotoMyprofile() {
-    this.router.navigateByUrl('/myprofile');
+    const userId = new BehaviorSubject(JSON.parse(localStorage.getItem('user_id')!));
+    this.users = userId.value
+    if (this.users != null) {
+      this.router.navigateByUrl('/myprofile');
+    } else {
+      this.router.navigateByUrl('/login');
+    }
+
   }
 
   enquiry() {
