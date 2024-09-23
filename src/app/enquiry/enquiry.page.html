@@ -32,23 +32,19 @@
 
     <form [formGroup]="enquiryForm" (ngSubmit)="submitForm()">
 
-      <ion-label color="medium" class="label">
-        Name</ion-label>
-      <ion-item lines="none">
-        <ion-input formControlName="user_name">
-        </ion-input>
+      <ion-item>
+        <ion-label position="floating">Name</ion-label>
+        <ion-input formControlName="user_name"></ion-input>
       </ion-item>
 
-      <ion-label color="medium" class="label">
-        Email</ion-label>
-      <ion-item lines="none">
-        <ion-input formControlName="user_email">
-        </ion-input>
+
+      <ion-item style="margin-top: 10px;">
+        <ion-label position="floating">Email</ion-label>
+        <ion-input formControlName="user_email"></ion-input>
       </ion-item>
 
-      <ion-label color="medium" class="label">
-        Description</ion-label>
-      <ion-item lines="none">
+      <ion-item style="margin-top: 10px;">
+        <ion-label position="floating">Description</ion-label>
         <ion-textarea rows="6" cols="3" autoGrow="true" formControlName="user_description">
         </ion-textarea>
       </ion-item>
