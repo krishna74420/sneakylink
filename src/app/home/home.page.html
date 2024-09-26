@@ -8,14 +8,14 @@
 </ion-header>
 
 <ion-content class="ion-padding">
-  <ion-row *ngFor="let item of userList">
+  <ion-row *ngFor="let item of userList" class="rows">
     <ion-col size="12">
       <img src="{{item.images}}" width="100%">
     </ion-col>
     <ion-col size="10">
       <p style="margin: 5px;">{{item.name}} - {{item.age}} Years</p>
     </ion-col>
-    <ion-col size="2">
+    <ion-col size="2" style="text-align: end;">
       <ion-icon name="chatbubble-ellipses-outline" (click)="enquiry()" style="font-size: 25px;"></ion-icon>
     </ion-col>
     <!-- <ion-col size="1.5">
