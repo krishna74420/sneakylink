@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button mode="md" defaultHref="/home"></ion-back-button>
     </ion-buttons>
-    <ion-title>Enquiry</ion-title>
+    <ion-title>Message</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -17,13 +17,12 @@
       <ion-label>Enquiry Lists</ion-label>
     </ion-segment-button>
   </ion-segment> -->
-  <br><br>
 
   <div *ngIf="selectSegments == '1'">
 
     <form [formGroup]="enquiryForm" (ngSubmit)="submitForm()">
 
-      <ion-item>
+      <!-- <ion-item>
         <ion-label position="floating">Name</ion-label>
         <ion-input formControlName="user_name"></ion-input>
       </ion-item>
@@ -32,10 +31,10 @@
       <ion-item style="margin-top: 10px;">
         <ion-label position="floating">Email</ion-label>
         <ion-input formControlName="user_email"></ion-input>
-      </ion-item>
+      </ion-item> -->
 
+      <ion-label class="label">Message</ion-label>
       <ion-item style="margin-top: 10px;">
-        <ion-label position="floating">Description</ion-label>
         <ion-textarea rows="6" cols="3" autoGrow="true" formControlName="user_description">
         </ion-textarea>
       </ion-item>

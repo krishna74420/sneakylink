@@ -51,16 +51,16 @@ export class EnquiryPage {
 
   submitForm() {
     console.log(this.enquiryForm.value)
-    if (this.enquiryForm.value['user_name'] == '' || this.enquiryForm.value['user_name'] == undefined || this.enquiryForm.value['user_name'] == null) {
-      this.showToast('Please enter your name!');
-      return;
-    }
-    if (this.enquiryForm.value['user_email'] == '' || this.enquiryForm.value['user_email'] == undefined || this.enquiryForm.value['user_email'] == null) {
-      this.showToast('Please enter email!');
-      return;
-    }
+    // if (this.enquiryForm.value['user_name'] == '' || this.enquiryForm.value['user_name'] == undefined || this.enquiryForm.value['user_name'] == null) {
+    //   this.showToast('Please enter your name!');
+    //   return;
+    // }
+    // if (this.enquiryForm.value['user_email'] == '' || this.enquiryForm.value['user_email'] == undefined || this.enquiryForm.value['user_email'] == null) {
+    //   this.showToast('Please enter email!');
+    //   return;
+    // }
     if (this.enquiryForm.value['user_description'] == '' || this.enquiryForm.value['user_description'] == undefined || this.enquiryForm.value['user_description'] == null) {
-      this.showToast('Please enter description!');
+      this.showToast('Please enter message!');
       return;
     }
     this.present();
@@ -75,7 +75,7 @@ export class EnquiryPage {
       console.log(response)
       if (response['status'] == 1) {
         this.enquiryForm.reset();
-        this.presentAlert(response['message']);
+        this.presentAlert('Your message is send successfully!');
       } else {
         this.presentAlert(response['message']);
       }
